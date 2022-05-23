@@ -1,24 +1,19 @@
-
-import { StyleSheet} from 'react-native';
 import React from 'react';
-import {
-    StatusBar
-} from 'react-native';
-import {NavigationContainer} from "@react-navigation/native";
-import {AuthProvider} from "./src/contexts/auth";
-import Routes from "./src/routes";
-import {colors} from "./src/assets/styles/colors";
+import {NavigationContainer} from "react-navigation";
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
 
 const Applayout = () => {
 
   return (
-    <NavigationContainer>
-      <AuthProvider>
-        <Routes/>
-        <StatusBar   backgroundColor={colors.transparent} translucent={true}  barStyle="light-content" />
-      </AuthProvider>
-    </NavigationContainer>
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+        <StatusBar
+          translucent={true}
+          barStyle="light-content"/>
+    </View>
+          
   );
 };
 export default function App() {
@@ -30,7 +25,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#00054',
     alignItems: 'center',
     justifyContent: 'center',
   },
